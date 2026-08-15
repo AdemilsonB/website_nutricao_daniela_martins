@@ -1,48 +1,59 @@
+import { Counter } from '../shared/Counter'
+import { Icon } from '../shared/Icon'
+import { Reveal } from '../shared/Reveal'
+
 export function HeroSection({ hero, contact, stats }) {
   return (
-    <section className="hero-section" id="top">
+    <section className="hero" id="top">
       <div className="hero-copy">
-        <span className="section-eyebrow">{hero.eyebrow}</span>
-        <h1>{hero.title}</h1>
-        <p className="hero-description">{hero.description}</p>
+        <Reveal className="section-eyebrow" as="span">
+          {hero.eyebrow}
+        </Reveal>
 
-        <div className="hero-actions">
+        <Reveal as="h1" delay={80}>
+          {hero.title}
+        </Reveal>
+
+        <Reveal as="p" className="hero-description" delay={150}>
+          {hero.description}
+        </Reveal>
+
+        <Reveal className="hero-actions" delay={220}>
           <a className="button" href={contact.whatsappUrl} target="_blank" rel="noreferrer">
-            Agendar pelo WhatsApp
+            {hero.primaryCta}
           </a>
-          <a className="link-action" href="#sobre">
-            Conhecer Daniela
+          <a className="link-action" href="#experiencia">
+            <span>{hero.secondaryCta}</span>
+            <Icon name="arrow" className="icon-svg icon-inline" />
           </a>
-        </div>
+        </Reveal>
 
-        <ul className="highlight-list">
-          {hero.highlights.map((item) => (
-            <li key={item}>{item}</li>
+        <ul className="hero-tags">
+          {hero.highlights.map((item, index) => (
+            <Reveal as="li" key={item} delay={300 + index * 70}>
+              {item}
+            </Reveal>
           ))}
         </ul>
       </div>
 
-      <div className="hero-panel">
-        <div className="hero-card">
-          <span className="hero-card-tag">Consulta personalizada</span>
-          <h2>{hero.cardTitle}</h2>
-          <p>{hero.cardText}</p>
-
-          <div className="stats-grid">
-            {stats.map((item) => (
-              <article key={item.label}>
-                <strong>{item.value}</strong>
-                <span>{item.label}</span>
-              </article>
-            ))}
-          </div>
+      <Reveal className="hero-figure" from="right" delay={120}>
+        <div className="hero-portrait">
+          <img src={hero.image.src} alt={hero.image.alt} loading="eager" />
         </div>
-
-        <div className="hero-floating-card">
-          <span className="floating-label">Contato direto</span>
+        <a className="hero-badge" href={contact.whatsappUrl} target="_blank" rel="noreferrer">
+          <small>Contato direto</small>
           <strong>{contact.whatsappLabel}</strong>
-          <p>Canal rapido para tirar duvidas e iniciar seu acompanhamento nutricional.</p>
-        </div>
+        </a>
+      </Reveal>
+
+      <div className="stats-strip">
+        {stats.map((stat, index) => (
+          <Reveal as="article" className="stat" key={stat.label} delay={index * 90}>
+            <Counter value={stat.value} suffix={stat.suffix} plain={stat.plain} />
+            <span>{stat.label}</span>
+          </Reveal>
+        ))}
       </div>
     </section>
   )
