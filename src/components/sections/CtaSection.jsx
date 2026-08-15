@@ -1,15 +1,20 @@
+import { Reveal } from '../shared/Reveal'
+
 export function CtaSection({ cta, contact }) {
   return (
-    <section className="section cta-section">
+    <Reveal as="section" className="section cta" id="contato">
       <span className="section-eyebrow">{cta.eyebrow}</span>
       <h2>{cta.title}</h2>
       <p>{cta.text}</p>
+
       <div className="cta-actions">
-        <a className="button" href={contact.whatsappUrl} target="_blank" rel="noreferrer">
-          Chamar no WhatsApp
+        <a className="button button-light" href={contact.whatsappUrl} target="_blank" rel="noreferrer">
+          {contact.whatsappLabel}
         </a>
-        <span className="cta-note">{contact.whatsappLabel}</span>
+        <a className="link-action link-light" href={contact.emailUrl}>
+          {contact.email}
+        </a>
       </div>
-    </section>
+    </Reveal>
   )
 }

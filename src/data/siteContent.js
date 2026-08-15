@@ -1,153 +1,233 @@
 const whatsappNumber = '5541996725546'
 
+// Retrato usado no hero e na seção Sobre. Trocar aqui atualiza os dois.
+const portrait = '/images/daniela-martins.png'
+
 export const siteContent = {
   brand: {
     shortName: 'DM',
-    title: 'Daniela Martins Nutricionista',
-    subtitle: 'Atendimento online e personalizado',
+    name: 'Daniela Martins da Silva',
+    role: 'Nutricionista · CRN 20539',
   },
   navigation: [
-    { href: '#servicos', label: 'Servicos' },
+    { href: '#atuacao', label: 'Atuação' },
     { href: '#sobre', label: 'Sobre' },
-    { href: '#metodologia', label: 'Metodologia' },
-    { href: '#depoimentos', label: 'Depoimentos' },
-    { href: '#faq', label: 'FAQ' },
+    { href: '#experiencia', label: 'Experiência' },
+    { href: '#competencias', label: 'Competências' },
+    { href: '#faq', label: 'Perguntas' },
   ],
   contact: {
     whatsappNumber,
-    whatsappLabel: '41 99672-5546',
+    whatsappLabel: '(41) 99672-5546',
     whatsappUrl: `https://wa.me/${whatsappNumber}`,
+    email: 'danimartinssilva697@gmail.com',
+    emailUrl: 'mailto:danimartinssilva697@gmail.com',
+    location: 'São José dos Pinhais e Curitiba — PR',
   },
   hero: {
-    eyebrow: 'Nutricao clinica com acolhimento e estrategia',
-    title: 'Alimentacao equilibrada para emagrecer, ganhar energia e cuidar da sua saude sem radicalismo.',
+    eyebrow: 'Nutricionista · CRN 20539',
+    title: 'Segurança alimentar e qualidade em cada refeição servida.',
     description:
-      'Daniela Martins desenvolve acompanhamentos nutricionais personalizados para quem quer resultados sustentaveis, mais autonomia e uma relacao melhor com a comida.',
+      'Nutricionista formada pela Universidade Positivo, com atuação em controle higiênico-sanitário, boas práticas de fabricação e gestão da qualidade em Unidades de Alimentação e Nutrição.',
+    image: {
+      src: portrait,
+      alt: 'Retrato profissional de Daniela Martins da Silva',
+    },
     highlights: [
-      'Plano alimentar ajustado a rotina, preferencias e objetivos reais',
-      'Atendimento humanizado com orientacoes claras e acompanhamento proximo',
-      'Foco em constancia, bem-estar, performance e mudanca de habitos',
+      'Controle higiênico-sanitário conforme RDC e POPs',
+      'Nutrição escolar e Educação Alimentar e Nutricional',
+      'Produção de refeições em larga escala',
     ],
-    cardTitle: 'Atendimento que olha para voce por inteiro',
-    cardText:
-      'A proposta do site agora comunica mais autoridade, proximidade e conversao, seguindo a estrutura visual que funciona bem para nutricao.',
+    primaryCta: 'Falar no WhatsApp',
+    secondaryCta: 'Ver trajetória',
   },
   stats: [
-    { value: 'UP', label: 'Formada em Nutricao pela Universidade Positivo' },
-    { value: '1:1', label: 'Estrategias personalizadas para cada paciente' },
-    { value: 'WA', label: 'Suporte rapido pelo WhatsApp' },
-  ],
-  problemStatement: {
-    title: 'Seu plano alimentar precisa funcionar na vida real.',
-    text:
-      'Dietas muito restritivas costumam gerar culpa, cansaco e recomeco. O objetivo aqui e criar um processo possivel, com educacao nutricional, constancia e resultados que possam ser sustentados.',
-  },
-  services: [
     {
-      title: 'Emagrecimento saudavel',
-      text:
-        'Organizacao alimentar para reduzir peso com equilibrio, sem promessas milagrosas e sem cortar tudo o que voce gosta.',
+      value: 4,
+      suffix: '',
+      label: 'experiências em nutrição e alimentação coletiva',
     },
     {
-      title: 'Reeducacao alimentar',
-      text:
-        'Mudancas graduais para melhorar rotina, saciedade, qualidade das escolhas e relacao com a comida.',
+      value: 100,
+      suffix: 'h',
+      label: 'de monitoria acadêmica em Técnica e Dietética e Segurança Alimentar',
     },
     {
-      title: 'Hipertrofia e performance',
-      text:
-        'Estrategias nutricionais para treinos, ganho de massa magra, recuperacao muscular e mais energia no dia a dia.',
-    },
-    {
-      title: 'Saude e prevencao',
-      text:
-        'Acompanhamento para quem busca qualidade de vida, organizacao da alimentacao e cuidado continuo com a saude.',
+      value: 2026,
+      suffix: '',
+      label: 'graduação concluída na Universidade Positivo',
+      plain: true,
     },
   ],
-  about: {
-    eyebrow: 'Sobre Daniela Martins',
-    title: 'Nutricionista formada pela Universidade Positivo, com olhar humano e pratico para a sua rotina.',
-    paragraphs: [
-      'Daniela Martins acredita que nutricao vai muito alem de entregar uma dieta pronta. O atendimento parte da escuta, do entendimento da sua rotina e da construcao de escolhas alimentares que realmente facam sentido para voce.',
-      'O foco do acompanhamento e unir ciencia, organizacao e acolhimento para que o paciente consiga emagrecer, melhorar a energia, cuidar da saude e manter resultados sem viver em ciclos de restricao.',
-    ],
-    imageNote: 'Reserve esta area para suas fotos em /public/images',
-  },
-  approach: {
-    eyebrow: 'Metodologia',
-    title: 'Como funciona o acompanhamento nutricional',
-    pillars: [
-      {
-        index: '01',
-        title: 'Avaliacao completa',
-        text:
-          'A consulta considera rotina, historico alimentar, objetivos, preferencias, exames e dificuldades do dia a dia.',
-      },
-      {
-        index: '02',
-        title: 'Plano possivel de seguir',
-        text:
-          'As orientacoes sao feitas para encaixar na sua realidade, com mais clareza, flexibilidade e organizacao.',
-      },
-      {
-        index: '03',
-        title: 'Acompanhamento e ajustes',
-        text:
-          'O processo evolui com voce, com revisoes e adaptacoes para manter constancia e melhorar resultados.',
-      },
-    ],
-  },
-  testimonials: {
-    eyebrow: 'Depoimentos',
-    title: 'O que pacientes buscam quando procuram um cuidado nutricional assim',
+  areas: {
+    eyebrow: 'Áreas de atuação',
+    title: 'O trabalho técnico que sustenta uma refeição segura',
+    description:
+      'Atuação construída em unidades reais de produção — universidades, indústrias e a rede escolar municipal.',
     items: [
       {
-        quote:
-          'Quero emagrecer sem voltar para o efeito sanfona e aprender a comer melhor sem transformar a alimentacao em sofrimento.',
-        author: 'Paciente com foco em emagrecimento',
+        title: 'Controle higiênico-sanitário',
+        text:
+          'Verificação de conformidades e garantia das boas práticas de fabricação segundo a legislação sanitária vigente (RDC e POPs).',
       },
       {
-        quote:
-          'Preciso de uma rotina alimentar mais organizada para ter energia, treinar melhor e manter consistencia no dia a dia.',
-        author: 'Paciente com foco em performance',
+        title: 'Gestão da qualidade em UAN',
+        text:
+          'Monitoramento de temperaturas, padronização de processos produtivos e apoio à gestão da qualidade da unidade.',
       },
       {
-        quote:
-          'Procuro uma nutricionista que me ajude de forma leve, realista e personalizada, sem formulas prontas.',
-        author: 'Paciente em reeducacao alimentar',
+        title: 'Nutrição escolar e EAN',
+        text:
+          'Planejamento de cardápios da alimentação escolar, relatórios técnicos de visitas e oficinas de Educação Alimentar e Nutricional.',
       },
+      {
+        title: 'Alimentação coletiva',
+        text:
+          'Acompanhamento de recebimento, armazenamento, produção e distribuição de refeições em larga escala.',
+      },
+    ],
+  },
+  about: {
+    eyebrow: 'Sobre',
+    title: 'Base técnica, atenção ao processo e trabalho em equipe.',
+    description:
+      'Sou Daniela Martins da Silva, nutricionista formada pela Universidade Positivo, com atuação em segurança alimentar, controle higiênico-sanitário e gestão da qualidade em Unidades de Alimentação e Nutrição.',
+    paragraphs: [
+      'Minha trajetória foi construída dentro da operação: acompanhei o recebimento, o armazenamento, a produção e a distribuição de refeições em unidades de grande porte, e conduzi oficinas de Educação Alimentar e Nutricional na rede escolar de São José dos Pinhais.',
+      'Trabalho com foco na melhoria contínua dos processos, na conformidade com a legislação sanitária e na relação próxima com as equipes de produção — que são quem faz a boa prática acontecer todos os dias.',
+    ],
+    education: [
+      {
+        title: 'Bacharelado em Nutrição',
+        place: 'Universidade Positivo — Campus Ecoville',
+        detail: 'Concluído em Junho/2026 · Noturno / Presencial',
+      },
+      {
+        title: 'Técnico em Administração',
+        place: 'Colégio Estadual Costa Viana',
+        detail: 'Integrado ao Ensino Médio · 2018 – 2021',
+      },
+    ],
+    monitoring: [
+      'Monitoria em Técnica e Dietética · 60h',
+      'Monitoria em Segurança Alimentar e Nutricional · 40h',
+    ],
+    image: {
+      src: portrait,
+      alt: 'Daniela Martins da Silva, nutricionista',
+      badge: 'Daniela Martins da Silva',
+      caption: 'Nutricionista · CRN 20539 · São José dos Pinhais, PR',
+    },
+  },
+  experience: {
+    eyebrow: 'Trajetória',
+    title: 'Experiência profissional',
+    items: [
+      {
+        role: 'Assistente de Nutrição',
+        company: "Grupo Oliveira's — Unidade PUC",
+        period: 'Abril/2026 – Atual',
+        current: true,
+        bullets: [
+          'Responsável pelo controle higiênico-sanitário da unidade, garantindo conformidade com as boas práticas de fabricação e a legislação sanitária vigente.',
+          'Monitoramento de temperaturas, verificação de conformidades e apoio à gestão da qualidade dos processos produtivos.',
+        ],
+      },
+      {
+        role: 'Estágio Obrigatório em Nutrição',
+        company: 'Sodexo — Unidade Electrolux Guabirotuba',
+        period: '3 meses · 2025/2026',
+        bullets: [
+          'Vivência em alimentação coletiva de grande porte, acompanhando recebimento, armazenamento, produção e distribuição de refeições.',
+          'Apoio ao controle higiênico-sanitário e à padronização de processos conforme boas práticas.',
+          'Acompanhamento da rotina do nutricionista responsável técnico na gestão da UAN.',
+        ],
+      },
+      {
+        role: 'Estagiária em Nutrição · Merenda Escolar',
+        company: 'Prefeitura Municipal de São José dos Pinhais',
+        period: 'Fev/2025 – Dez/2025',
+        bullets: [
+          'Recebimento e conferência de amostras e produtos junto a empresas terceirizadas e à agricultura familiar.',
+          'Planejamento de cardápios da alimentação escolar e elaboração de relatórios técnicos de visitas.',
+          'Condução de oficinas de Educação Alimentar e Nutricional com alunos e de introdução alimentar com bebês.',
+        ],
+      },
+      {
+        role: 'Estagiária de Nutrição',
+        company: "Risotolândia (It's Cool) — Unidade Positivo Internacional",
+        period: 'Out/2023 – Out/2024',
+        bullets: [
+          'Supervisão da qualidade dos setores produtivos e controle de temperaturas dos equipamentos.',
+          'Verificação de conformidades na abertura dos buffets e conferência de produtos para produção.',
+          'Acompanhamento dos horários de funcionamento e distribuição das refeições.',
+        ],
+      },
+      {
+        role: 'Aprendiz de Logística',
+        company: 'Oerlikon Balzers',
+        period: 'Jan/2022 – Abr/2023',
+        bullets: [
+          'Controle de planilhas de rotas e transferências de notas fiscais, com acompanhamento de liberações e recebimento de pedidos.',
+          'Contato com transportadoras, separação de materiais para rotas e organização de arquivos fiscais.',
+        ],
+      },
+    ],
+  },
+  skills: {
+    eyebrow: 'Competências',
+    title: 'Como eu trabalho no dia a dia',
+    items: [
+      'Bom relacionamento interpessoal',
+      'Gestão de equipe',
+      'Proatividade e melhoria contínua de processos',
+      'Iniciativa para propor e implementar melhorias',
+      'Pontualidade e comprometimento com as entregas',
+    ],
+    extras: [
+      { label: 'Idiomas', value: 'Português nativo · Inglês básico' },
+      { label: 'Informática', value: 'Pacote Office' },
+      { label: 'Mobilidade', value: 'CNH categoria AB' },
     ],
   },
   faq: {
-    eyebrow: 'FAQ',
-    title: 'Duvidas frequentes sobre o atendimento',
+    eyebrow: 'Perguntas frequentes',
+    title: 'O que costumam me perguntar',
     items: [
       {
-        question: 'Como funciona a primeira consulta?',
+        question: 'Qual é a sua área de atuação?',
         answer:
-          'A primeira consulta e o momento de entender seus objetivos, rotina, historico de saude, preferencias alimentares e principais desafios. A partir disso, Daniela estrutura uma conduta personalizada para o seu caso.',
+          'Segurança alimentar, controle higiênico-sanitário e gestão da qualidade em Unidades de Alimentação e Nutrição, além de nutrição escolar e Educação Alimentar e Nutricional.',
       },
       {
-        question: 'O atendimento pode ser online?',
+        question: 'O que é uma UAN?',
         answer:
-          'Sim. O site foi preparado para destacar atendimento online e acompanhamento proximo, facilitando o contato e a continuidade do processo.',
+          'Unidade de Alimentação e Nutrição é a estrutura que produz refeições em larga escala — restaurantes corporativos, universidades, escolas e indústrias. É nesse ambiente que atuo, cuidando da conformidade sanitária e da qualidade dos processos produtivos.',
       },
       {
-        question: 'O plano alimentar e individualizado?',
+        question: 'Que trabalho você já desenvolveu em nutrição escolar?',
         answer:
-          'Sim. A proposta e respeitar sua realidade, seus horarios, suas preferencias e o objetivo do tratamento para criar algo sustentavel.',
+          'Na Prefeitura de São José dos Pinhais, atuei no recebimento e conferência de amostras junto a empresas terceirizadas e à agricultura familiar, no planejamento de cardápios, na elaboração de relatórios técnicos de visitas e na condução de oficinas de EAN com alunos e de introdução alimentar com bebês.',
       },
       {
-        question: 'Para quem o acompanhamento e indicado?',
+        question: 'Você atende pacientes em consultório?',
         answer:
-          'Para pessoas que desejam emagrecer com saude, melhorar habitos, ganhar energia, organizar a alimentacao ou buscar mais qualidade de vida com orientacao profissional.',
+          'Meu foco atual é a atuação técnica em segurança alimentar e alimentação coletiva. Para conversar sobre oportunidades, projetos de Educação Alimentar e Nutricional ou consultoria em boas práticas, o contato direto é pelo WhatsApp.',
+      },
+      {
+        question: 'Onde você atua?',
+        answer:
+          'São José dos Pinhais e Curitiba, no Paraná. Tenho CNH categoria AB e disponibilidade para deslocamento entre unidades.',
       },
     ],
   },
   cta: {
-    eyebrow: 'Agendamento',
-    title: 'Vamos montar uma estrategia alimentar que combine com a sua vida.',
+    eyebrow: 'Contato',
+    title: 'Vamos conversar sobre o seu projeto ou a sua unidade.',
     text:
-      'Se voce quer um atendimento nutricional mais humano, organizado e orientado por objetivos reais, o proximo passo e conversar com Daniela Martins pelo WhatsApp.',
+      'Oportunidades profissionais, consultoria em boas práticas ou projetos de Educação Alimentar e Nutricional — o caminho mais rápido é o WhatsApp.',
+  },
+  footer: {
+    copyright: `© ${new Date().getFullYear()} Daniela Martins da Silva · Nutricionista CRN 20539`,
   },
 }
