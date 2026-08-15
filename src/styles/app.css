@@ -336,7 +336,7 @@
   width: 100%;
   aspect-ratio: 4 / 5;
   object-fit: cover;
-  object-position: center 22%;
+  object-position: center 42%;
   transition: transform 900ms var(--ease);
 }
 
@@ -504,7 +504,7 @@
   width: 100%;
   aspect-ratio: 3 / 4;
   object-fit: cover;
-  object-position: center 18%;
+  object-position: center 45%;
   filter: saturate(0.95);
   transition: filter 500ms var(--ease);
 }
@@ -1169,7 +1169,8 @@
   }
 
   .hero-portrait img {
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 4 / 5;
+    object-position: center 40%;
   }
 
   .hero-badge {

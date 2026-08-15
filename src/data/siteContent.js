@@ -1,7 +1,7 @@
 const whatsappNumber = '5541996725546'
 
 // Retrato usado no hero e na seção Sobre. Trocar aqui atualiza os dois.
-const portrait = '/images/daniela-martins.png'
+const portrait = '/images/daniela-martins.jpg'
 
 export const siteContent = {
   brand: {
